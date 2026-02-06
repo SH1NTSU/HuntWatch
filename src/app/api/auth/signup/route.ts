@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     // Seed default notifications for new user
     await pool.query(
       `INSERT INTO notifications (user_id, type, message, time, read)
-       VALUES ($1, 'achievement', 'Welcome to HijauKita! Start your green journey 🌱', 'Just now', false)`,
+       VALUES ($1, 'achievement', 'Welcome to HuntWatch! Start your green journey 🌱', 'Just now', false)`,
       [user.id]
     );
 

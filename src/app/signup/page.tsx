@@ -39,7 +39,7 @@ export default function SignupPage() {
           <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/20">
             <Leaf className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Join HijauKita</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Join HuntWatch</h1>
           <p className="text-sm text-gray-500 mt-1">Start your green accountability journey</p>
         </div>
 

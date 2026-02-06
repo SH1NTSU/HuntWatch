@@ -125,7 +125,7 @@ export default function ProfilePage() {
             Your score is public
           </p>
           <p className="text-xs text-amber-600 mt-0.5">
-            Once you join HijauKita, your green score is visible to your connected
+            Once you join HuntWatch, your green score is visible to your connected
             community. You can&apos;t hide — accountability drives change.
           </p>
         </div>

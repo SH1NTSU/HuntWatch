@@ -34,7 +34,7 @@ export default function LoginPage() {
             <Leaf className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
-          <p className="text-sm text-gray-500 mt-1">Sign in to HijauKita</p>
+          <p className="text-sm text-gray-500 mt-1">Sign in to HuntWatch</p>
         </div>
 
         {/* Form card */}

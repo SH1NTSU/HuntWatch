@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HijauKita — Our Green",
+  title: "HuntWatch",
   description:
     "A social accountability platform where your environmental behavior is visible to your community.",
 };

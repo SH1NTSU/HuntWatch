@@ -32,7 +32,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Check for stored token on mount
   useEffect(() => {
-    const storedToken = localStorage.getItem("hijaukita_token");
+    const storedToken = localStorage.getItem("huntwatch_token");
     if (storedToken) {
       setToken(storedToken);
       // Verify token and get user
@@ -48,7 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setIsLoading(false);
         })
         .catch(() => {
-          localStorage.removeItem("hijaukita_token");
+          localStorage.removeItem("huntwatch_token");
           setToken(null);
           setUser(null);
           setIsLoading(false);
@@ -84,7 +84,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return { error: data.error || "Login failed" };
       }
 
-      localStorage.setItem("hijaukita_token", data.token);
+      localStorage.setItem("huntwatch_token", data.token);
       setToken(data.token);
       setUser(data.user);
       router.push("/");
@@ -108,7 +108,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return { error: data.error || "Signup failed" };
       }
 
-      localStorage.setItem("hijaukita_token", data.token);
+      localStorage.setItem("huntwatch_token", data.token);
       setToken(data.token);
       setUser(data.user);
       router.push("/");
@@ -119,7 +119,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [router]);
 
   const logout = useCallback(() => {
-    localStorage.removeItem("hijaukita_token");
+    localStorage.removeItem("huntwatch_token");
     setToken(null);
     setUser(null);
     router.push("/login");
