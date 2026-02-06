@@ -35,6 +35,14 @@ export async function POST(req: NextRequest) {
     });
   } catch (err) {
     console.error("Login error:", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    console.error("Error details:", {
+      message: err instanceof Error ? err.message : String(err),
+      stack: err instanceof Error ? err.stack : undefined,
+      DATABASE_URL: process.env.DATABASE_URL ? "Set" : "Missing",
+    });
+    return NextResponse.json({
+      error: "Internal server error",
+      details: process.env.NODE_ENV === "development" ? (err instanceof Error ? err.message : String(err)) : undefined
+    }, { status: 500 });
   }
 }
